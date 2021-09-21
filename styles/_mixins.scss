@@ -1,0 +1,22 @@
+$desktop-breakpoints: (
+  "small": "40rem",
+  "medium": "64rem",
+  "large": "87.5rem",
+);
+
+$mobile-breakpoints: (
+  "small": "39.9375rem",
+  "medium": "63.9375rem",
+  "large": "87.4375rem",
+);
+
+@mixin desktop($size) {
+  @media (min-width: map-get($desktop-breakpoints, $size )) {
+    @content;
+  }
+}
+@mixin mobile($size) {
+  @media (max-width: map-get($mobile-breakpoints, $size )) {
+    @content;
+  }
+}

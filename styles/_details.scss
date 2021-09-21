@@ -1,0 +1,66 @@
+.details {
+  position: relative;
+  margin-top: 17.5rem;
+  padding-bottom: 7.8125rem;
+  background: linear-gradient($verydarkgrayblue, $veryDarkDesaturatedBlue);
+  border-bottom-left-radius: 10rem;
+  border-top-right-radius: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &-heading {
+    padding-top: 14.6875rem;
+    display: flex;
+    justify-content: center;
+
+    &-text {
+      display: flex;
+
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      text-align: center;
+      h2 {
+        padding-bottom: 1.5rem;
+        color: $white;
+        z-index: 2;
+        @include desktop(small) {
+          font-size: 3rem;
+        }
+        @include desktop(medium) {
+          font-size: 4rem;
+        }
+      }
+      p {
+        line-height: 2;
+        z-index: 2;
+      }
+    }
+  }
+  &-heading-img-one {
+    position: absolute;
+    z-index: 1;
+    width: calc(100% -10rem);
+    height: calc(100% -10rem);
+    top: 0;
+    img {
+      width: 100%;
+      transform: translateY(-50%);
+    }
+  }
+  &-heading-img-two {
+    top: 0;
+
+    position: absolute;
+    border-top-right-radius: 10rem;
+    background-image: url(/img/bg-pattern-circles.svg);
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+    background-position: center 160%;
+    background-repeat: no-repeat;
+  }
+}

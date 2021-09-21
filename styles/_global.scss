@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-size: 62.5%;
+  font-family: "Ubuntu", sans-serif;
+}
+h1 {
+  font-size: 2.2rem;
+  color: $white;
+  font-weight: 400;
+  @include desktop(medium) {
+    font-size: 4rem;
+  }
+}
+p {
+  font-size: 1rem;
+  color: $grayishBlue;
+  @include desktop(medium) {
+    font-size: 2rem;
+  }
+}
+a {
+  text-decoration: none;
+  color: $veryDarkBlackBlue;
+}
+h2 {
+  color: $veryDarkBlackBlue;
+  font-size: 1.7rem;
+  padding: 0 3.25rem;
+  font-weight: 300;
+}
+h3 {
+  font-size: 1.7rem;
+  font-weight: 300;
+  color: $white;
+}

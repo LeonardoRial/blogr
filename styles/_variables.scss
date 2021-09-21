@@ -1,0 +1,103 @@
+//Primary
+$lightRed: hsl(356, 100%, 66%);
+$veryLightRed: hsl(355, 100%, 74%);
+$veryDarkBlue: hsl(208, 49%, 24%);
+
+//Neutral
+$white: hsl(0, 0%, 100%);
+$grayishBlue: hsl(0, 0%, 87%);
+$veryDarkGrayshBlue: hsl(207, 13%, 44%);
+$veryDarkBlackBlue: hsl(240, 10%, 16%);
+
+//Gradient
+$gradientVeryLightRed: hsl(13, 100%, 72%);
+$gradientLightRed: hsl(353, 100%, 62%);
+
+//Gradient Body
+$verydarkgrayblue: hsl(237, 17%, 21%);
+$veryDarkDesaturatedBlue: hsl(237, 23%, 32%);
+
+//Class helpers
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hide-for-desktop {
+  @include desktop(medium) {
+    display: none;
+  }
+}
+.hide-for-mobile {
+  @include mobile(medium) {
+    display: none;
+  }
+}
+.button {
+  font-size: 1.1rem;
+  font-weight: 500;
+  width: 8.625rem;
+  height: 3.25rem;
+  border-radius: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+  &:nth-child(1) {
+    color: $veryDarkBlackBlue;
+    margin-bottom: 1rem;
+    &:hover {
+      background: $lightRed;
+      color: white;
+    }
+  }
+  &:nth-child(2) {
+    color: $white;
+    background: linear-gradient(
+      to right,
+      $gradientVeryLightRed,
+      $gradientLightRed
+    );
+    &:hover {
+      background: none;
+      border: 1px solid $gradientLightRed;
+      color: $veryDarkBlackBlue;
+    }
+  }
+}
+
+//JS classes
+//list animation
+.rotate {
+  transform: rotate(180deg);
+}
+.arrow-link {
+  transition: all 0.3s ease-in-out;
+}
+
+//buger animation
+.burger-animation {
+  .burger-menu {
+    background: transparent;
+  }
+  .burger-menu::before {
+    transform: rotate(45deg);
+  }
+  .burger-menu::after {
+    transform: rotate(-45deg);
+  }
+}
+.hidden {
+  visibility: hidden;
+  display: none;
+  opacity: 0;
+}
+.show {
+  opacity: 1;
+  visibility: visible;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  animation: fade 0.3s linear;
+}

@@ -1,0 +1,42 @@
+.footer {
+  position: relative;
+  padding: 5rem 0;
+  border-top-right-radius: 10rem;
+  background: $verydarkgrayblue;
+  text-align: center;
+  @include desktop(small) {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+  }
+  &-img {
+    padding-top: 2.625rem;
+  }
+
+  &-product,
+  &-company,
+  &-connect {
+    padding-top: 5.3125rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include desktop(small) {
+      align-items: start;
+      padding-top: 2.625rem;
+    }
+
+    h3 {
+      padding-bottom: 2rem;
+    }
+    a {
+      font-size: 1.3rem;
+      color: $grayishBlue;
+      padding-top: 1.3rem;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        color: $lightRed;
+      }
+    }
+  }
+}
